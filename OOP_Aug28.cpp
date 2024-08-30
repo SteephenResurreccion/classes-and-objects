@@ -35,6 +35,8 @@ using namespace std;
 				return year;	
 			}
 	};
+	
+	
 
 
 
@@ -56,13 +58,14 @@ using namespace std;
 			cout<<"\n	4. Exit";
 			cout<<"\n	Input your choice via number[1-4]: ";
 			cin>>numchoice;
+			cin.ignore();
 				switch (numchoice){
 					case 1:
 						cout<<"\n	"<<i+1<<". Add Book";
 						cout<<"\n		Enter Title: ";
-						cin>>titlemain;
+						getline(cin,titlemain);
 						cout<<"		Enter Author: ";
-						cin>>authormain;
+						getline(cin,authormain);
 						cout<<"		Enter Year: ";
 						cin>>yearmain;
 						cout<<"		Successful!\n		Press Enter to Continue";	
@@ -90,9 +93,9 @@ using namespace std;
 					case 3:
 						cout<<"\n	3. Search Book";
 						cout<<"\n		Enter Title: ";
-						cin>>titlemain;
+						getline(cin,titlemain);
 						cout<<"		Enter Author: ";
-						cin>>authormain;
+						getline(cin,authormain);
 						cout<<"		Enter Year: ";
 						cin>>yearmain;
 						for(h=0;h<i;h++){
