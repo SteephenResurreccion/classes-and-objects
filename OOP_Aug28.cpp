@@ -94,17 +94,15 @@ using namespace std;
 						cout<<"\n	3. Search Book";
 						cout<<"\n		Enter Title: ";
 						getline(cin,titlemain);
-						cout<<"		Enter Author: ";
-						getline(cin,authormain);
-						cout<<"		Enter Year: ";
-						cin>>yearmain;
 						for(h=0;h<i;h++){
-							if(bookarray[h].getTitle().compare(titlemain)==0&&bookarray[h].getAuthor().compare(authormain)==0&&bookarray[h].getYear()==yearmain){
-								cout<<"\n	Title			Author			Year";
+							if(bookarray[h].getTitle().compare(titlemain)==0){
+								cout<<"\n	Title				Author				Year";
 								cout<<"\n	"<<bookarray[h].getTitle(); 
-								cout<<"			"<<bookarray[h].getAuthor(); 
-								cout<<"			"<<bookarray[h].getYear(); 
+								cout<<"				"<<bookarray[h].getAuthor(); 
+								cout<<"				"<<bookarray[h].getYear(); 
 							}
+							else
+							cout<<"		Could not find the book you were looking for";
 						}
 						cout<<"\n\n	Press Enter to Continue";	
 						getch();
